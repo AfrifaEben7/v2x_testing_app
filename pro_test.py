@@ -7,8 +7,7 @@ import ctypes
 from sys import platform
 import time
 import csv
-# import module
-# import app
+
 
 current_dir = os.getcwd()
 
@@ -181,10 +180,8 @@ class MainWindow(QDialog):
                 print('Time {:.2f} ObjId s {:.2f} x {:.2f} y {:.2f} heading {:.2f} speed {:.2f} wheelAngle {:.2f} wheelRot {:.2f}'.format(
                             obj_state.timestamp, obj_state.id,obj_state.s, obj_state.x, obj_state.y, obj_state.h, obj_state.speed * 3.6, obj_state.wheelAngle, obj_state.wheelRot))
 
-
- 
-                se.SE_Step()
-           
+                se.SE_Step()     
+                    
         self.data_function()
             
 
