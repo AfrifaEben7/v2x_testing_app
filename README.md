@@ -8,7 +8,7 @@ Make sure you have the following dependencies installed:
 
 1. PyQt5
 2. pandas, matplotlib
-3. Esmini (Please refer to the [Esmini documentation](https://esmini.github.io) for installation instructions specific to your system.(Build recommended))
+3. Esmini (Please refer to the [Esmini documentation](https://esmini.github.io) for installation instructions specific to your system.(Building recommended))
 
 ## Setup
 
