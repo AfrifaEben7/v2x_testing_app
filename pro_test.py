@@ -13,11 +13,11 @@ import csv
 current_dir = os.getcwd()
 
 if platform in ["linux", "linux2"]:
-    se = ctypes.CDLL("..esmini/bin/libesminiLib.so")
+    se = ctypes.CDLL("../esmini/bin/libesminiLib.so")
 elif platform == "darwin":
     se = ctypes.CDLL("../esmini/bin/libesminiLib.dylib")
 elif platform == "win32":
-    se = ctypes.CDLL("..esmini/bin/esminiLib.dll")
+    se = ctypes.CDLL("../esmini/bin/esminiLib.dll")
 else:
     print(f"Unsupported platform: {platform}")
     quit()
@@ -171,8 +171,6 @@ class MainWindow(QDialog):
                         if obj_state.id == 1:
                             self.t_speed_2.display(obj_state.speed)
                             self.t_angle_2.display(obj_state.wheelRot)
-
-                        # result = "Unknown" # you can replace it with your condition and result calculation
 
                         data_row = [obj_state.timestamp, obj_state.id,obj_state.s, obj_state.x, obj_state.y, obj_state.h, obj_state.speed * 3.6]
                         writer.writerow(data_row)
