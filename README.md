@@ -7,8 +7,9 @@ The V2X Testing App is a Python application that utilizes PyQt5 and pandas libra
 Make sure you have the following dependencies installed:
 
 1. PyQt5
-2. pandas, matplotlib
-3. Esmini (Please refer to the [Esmini documentation](https://esmini.github.io) for installation instructions specific to your system.(Building recommended))
+2. pandas
+3. matplotlib
+4. Esmini (Please refer to the [Esmini documentation](https://esmini.github.io) for installation instructions specific to your system.(Building recommended))
 
 ## Setup
 
