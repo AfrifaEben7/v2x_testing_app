@@ -107,7 +107,7 @@ class MainWindow(QDialog):
             global path 
             path = file_path
             print('File loaded:', file_path)
-                  
+                             
     def data_function(self):
         os.chdir(current_dir)
         command = "python pyqt.py"
@@ -121,8 +121,7 @@ class MainWindow(QDialog):
         command = f"python ./scripts/plot_dat.py {dat_path} --param speed"
         comm = "chmod +x ./scripts/plot_dat.py"
         os.system(comm)
-        os.system(command)
-      
+        os.system(command)      
 
     def replay_function(self):
         dat_path = self._extracted_from_replay_function_6()
@@ -135,27 +134,18 @@ class MainWindow(QDialog):
         current_path = os.getcwd()
         scene = os.path.basename(path)
         name, ext = os.path.splitext(scene)
-        new_filename = f"{name}.dat"
-       
+        new_filename = f"{name}.dat"       
         print(new_filename)
 
         return os.path.join(current_path, new_filename)
-
-
-        
-
     def start_function(self):
         se.SE_Init(path.encode(), 0, 1, 0, 1)
-
-        
-
         obj_state = SEScenarioObjectState()  # object that will be passed and filled in with object state info
         last_call_time = time.time()
 
         with open('mylog.csv', 'w', newline='') as csvfile:
             writer = csv.writer(csvfile)
             writer.writerow(['Time', 'ObjId', 's', 'x', 'y', 'heading', 'speed'])
-
 
             while not se.SE_GetQuitFlag():
                 if time.time() - last_call_time >= 0.5:            
