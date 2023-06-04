@@ -7,14 +7,15 @@ The V2X Testing App is a Python application that utilizes PyQt5 and pandas libra
 Make sure you have the following dependencies installed:
 
 1. PyQt5
-2. pandas, matplotlib
-3. Esmini (Please refer to the [Esmini documentation](https://esmini.github.io) for installation instructions specific to your system.(Building recommended))
+2. pandas
+3. matplotlib
+4. Esmini (Please refer to the [Esmini documentation](https://esmini.github.io) for installation instructions specific to your system.(Building recommended))
 
 ## Setup
 
 1. Clone the repository and navigate to the project's root directory.
 2. Place the contents of the `scenario_examples` folder into the `/esmini/resources/xosc` directory. This step is necessary for demo purposes.
-3. Ensure that both the `v2x_testing_app` and `esmini` folders are located in the same parent folder.
+3. Ensure that both the `code` and `esmini` folders are located in the same parent folder (ie, esmini should be in the root folder).
 
 ## Running the Application
 
@@ -22,7 +23,7 @@ To run the V2X Testing App, follow these steps:
 
 1. Open a terminal or command prompt.
 2. Navigate to the project's root directory.
-3. Run the following command: `python pro_test.py`.
+3. Run the following command: `python code/pro_test.py`.
 4. In the application's GUI, select a scenario file from the `/esmini/resources/xosc` directory. Choose any of the moved `.xosc` files.
 5. Click the "Start" button to initiate the scenario.
 6. Press the "Esc" key to end the scenario.
