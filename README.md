@@ -1,6 +1,6 @@
 # V2X Testing App For For Proving Ground Use.
 
-The V2X Testing App is a Python application that utilizes PyQt5 and pandas libraries for testing V2X scenarios. It integrates with Esmini, a simulation platform. This README provides instructions on how to install, set up, and run the application.
+The V2X Testing App is a Python application that utilizes PyQt5 and pandas libraries for proving grounds testing. It integrates with Esmini, a simulation platform. This README provides instructions on how to install, set up, and run the application.
 
 ## Dependencies
 
