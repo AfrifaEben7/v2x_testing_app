@@ -8,8 +8,9 @@ from sys import platform
 import time
 import csv
 
-
+# Get the current directory
 current_dir = os.getcwd()
+
 
 if platform in ["linux", "linux2"]:
     se = ctypes.CDLL("../esmini/bin/libesminiLib.so")
@@ -20,7 +21,8 @@ elif platform == "win32":
 else:
     print(f"Unsupported platform: {platform}")
     quit()
-
+    
+# Define the structure for SEScenarioObjectState
 class SEScenarioObjectState(ctypes.Structure):
     _fields_ = [
         ("id", ctypes.c_int),
@@ -59,7 +61,7 @@ replayer_path = os.path.join(esmini_folder_path, "bin/replayer")
 resources_path = os.path.join(esmini_folder_path, "resources")
 example_folder_path = os.path.join(esmini_folder_path, "EnvironmentSimulator/code-examples/hello_world")
 
-
+# Create the main window as a QDialog
 class MainWindow(QDialog):
     def __init__(self):
         super(MainWindow, self).__init__()
@@ -96,8 +98,6 @@ class MainWindow(QDialog):
         self.v_speed.setStyleSheet("background-color: light-green;")
         self.v_angle.setStyleSheet("background-color: light-green;")
         
-     
-
     def load_file_function(self):
         # Open a file dialog to choose a file to load
         
@@ -109,10 +109,10 @@ class MainWindow(QDialog):
             print('File loaded:', file_path)
                              
     def data_function(self):
+        # Change to the current directory
         os.chdir(current_dir)
         command = "python pyqt.py"
         os.system(command)
-
 
     def stats_function(self):  # sourcery skip: inline-variable, last-if-guard
 
@@ -139,6 +139,7 @@ class MainWindow(QDialog):
 
         return os.path.join(current_path, new_filename)
     def start_function(self):
+        # Initialize the SE (Simulation Engine) with the selected file
         se.SE_Init(path.encode(), 0, 1, 0, 1)
         obj_state = SEScenarioObjectState()  # object that will be passed and filled in with object state info
         last_call_time = time.time()
@@ -171,7 +172,7 @@ class MainWindow(QDialog):
                             obj_state.timestamp, obj_state.id,obj_state.s, obj_state.x, obj_state.y, obj_state.h, obj_state.speed * 3.6, obj_state.wheelAngle, obj_state.wheelRot))
 
                 se.SE_Step()     
-                    
+        # Call the data_function after the simulation is finished/quit           
         self.data_function()
             
 
