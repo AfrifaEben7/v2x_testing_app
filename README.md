@@ -11,6 +11,9 @@ Make sure you have the following dependencies installed:
 3. matplotlib
 4. Esmini (Please refer to the [Esmini documentation](https://esmini.github.io) for installation instructions specific to your system.(Building recommended))
 
+## Note
+  Cloning this project will clone Esimi as well, make sure to build for for your system.
+  
 ## Setup
 
 1. Clone the repository and navigate to the project's root directory.
