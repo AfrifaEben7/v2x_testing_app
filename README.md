@@ -14,7 +14,7 @@ Make sure you have the following dependencies installed:
 ## Setup
 
 1. Clone the repository and navigate to the project's root directory.
-2. Place the contents of the `scenario_examples` folder into the `/esmini/resources/xosc` directory. This step is necessary for demo purposes.
+2. Place the contents of the `scenario_examples` folder into the `/esmini/resources/xosc` directory (cp -r scenario_examples/. esmini/resources/xosc). This step is necessary for demo purposes.
 3. Ensure that both the `code` and `esmini` folders are located in the same parent folder (ie, esmini should be in the root folder).
 
 ## Running the Application
