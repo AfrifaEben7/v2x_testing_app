@@ -11,9 +11,11 @@ import csv
 # Get the current directory
 current_dir = os.getcwd()
 
+bool_check = False
 
 if platform in ["linux", "linux2"]:
     se = ctypes.CDLL("../esmini/bin/libesminiLib.so")
+    bool_check = True
 elif platform == "darwin":
     se = ctypes.CDLL("../esmini/bin/libesminiLib.dylib")
 elif platform == "win32":
@@ -65,7 +67,11 @@ example_folder_path = os.path.join(esmini_folder_path, "EnvironmentSimulator/cod
 class MainWindow(QDialog):
     def __init__(self):
         super(MainWindow, self).__init__()
-        uic.loadUi('xml_gui.ui', self)
+        if bool_check:
+            print("Running on Linux")
+            uic.loadUi('gui.ui', self)
+        else:
+            uic.loadUi('xml_gui.ui', self)
 
         # Position the window in the top-right corner
         screen_geometry = QApplication.desktop().screenGeometry()
