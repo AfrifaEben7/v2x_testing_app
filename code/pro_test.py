@@ -168,14 +168,28 @@ class MainWindow(QDialog):
                             self.t_speed_2.display(obj_state.speed)
                             self.t_angle_2.display(obj_state.wheelRot)
 
-                        data_row = [obj_state.timestamp, obj_state.id,obj_state.s, obj_state.x, obj_state.y, obj_state.h, obj_state.speed * 3.6]
+                        data_row = [obj_state.timestamp, 
+                                    obj_state.id,
+                                    obj_state.s, 
+                                    obj_state.x, 
+                                    obj_state.y, 
+                                    obj_state.h, 
+                                    obj_state.speed * 3.6]
                         writer.writerow(data_row)
                         csvfile.flush()
 
                         last_call_time = time.time()
         
                 print('Time {:.2f} ObjId s {:.2f} x {:.2f} y {:.2f} heading {:.2f} speed {:.2f} wheelAngle {:.2f} wheelRot {:.2f}'.format(
-                            obj_state.timestamp, obj_state.id,obj_state.s, obj_state.x, obj_state.y, obj_state.h, obj_state.speed * 3.6, obj_state.wheelAngle, obj_state.wheelRot))
+                            obj_state.timestamp, 
+                            obj_state.id,
+                            obj_state.s, 
+                            obj_state.x, 
+                            obj_state.y, 
+                            obj_state.h, 
+                            obj_state.speed * 3.6, 
+                            obj_state.wheelAngle, 
+                            obj_state.wheelRot))
 
                 se.SE_Step()     
         # Call the data_function after the simulation is finished/quit           
