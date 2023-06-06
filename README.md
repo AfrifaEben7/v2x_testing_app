@@ -12,7 +12,8 @@ Make sure you have the following dependencies installed:
 4. Esmini (Please refer to the [Esmini documentation](https://esmini.github.io) for installation instructions specific to your system.(Building recommended))
 
 ## Note
-  Cloning this project will clone Esimi as well, make sure to build for for your system.
+  - Cloning this project will clone Esimi as well (use this command: git clone --recurse-submodules https://github.com/AfrifaEben7/v2x_testing_app.git).
+  - Make sure to build for for your system.
   
 ## Setup
 
