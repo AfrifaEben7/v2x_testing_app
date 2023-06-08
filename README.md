@@ -7,29 +7,30 @@ The V2X Testing App is a Python application that utilizes PyQt5 and pandas libra
 Make sure you have the following dependencies installed:
 
 1. PyQt5
-2. pandas
-3. matplotlib
-4. Esmini (Please refer to the [Esmini documentation](https://esmini.github.io) for installation instructions specific to your system.(Building recommended))
+1. pandas
+1. matplotlib
+1. Esmini (Please refer to the [Esmini documentation](https://esmini.github.io) for installation instructions specific to your system.(Building recommended))
 
 ## Note
-  Cloning this project will clone Esimi as well, make sure to build for for your system.
+  - Cloning this project will clone Esimi as well (use this command: git clone --recurse-submodules https://github.com/AfrifaEben7/v2x_testing_app.git).
+  - Make sure to build for for your system.
   
 ## Setup
 
 1. Clone the repository and navigate to the project's root directory.
-2. Place the contents of the `scenario_examples` folder into the `/esmini/resources/xosc` directory (cp -r scenario_examples/. esmini/resources/xosc). This step is necessary for demo purposes.
-3. Ensure that both the `code` and `esmini` folders are located in the same parent folder (ie, esmini should be in the root folder).
+1. Place the contents of the `scenario_examples` folder into the `esmini/resources/xosc` directory (`cp -r scenario_examples/* esmini/resources/xosc`). This step is necessary for demo purposes.
+1. Ensure that both the `code` and `esmini` folders are located in the same parent folder (ie, esmini should be in the root folder).
 
 ## Running the Application
 
 To run the V2X Testing App, follow these steps:
 
 1. Open a terminal or command prompt.
-2. Navigate to the project's root directory.
-3. Run the following command: `python code/pro_test.py`.
-4. In the application's GUI, select a scenario file from the `/esmini/resources/xosc` directory. Choose any of the moved `.xosc` files.
-5. Click the "Start" button to initiate the scenario.
-6. Press the "Esc" key to end the scenario.
+1. Navigate to the project's root directory.
+1. Run the following command: `python code/pro_test.py`.
+1. In the application's GUI, select a scenario file from the `esmini/resources/xosc` directory. Choose any of the moved `.xosc` files.
+1. Click the "Start" button to initiate the scenario.
+1. Press the "Esc" key to end the scenario.
 
 ## Contributing
 
