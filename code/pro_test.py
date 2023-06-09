@@ -156,7 +156,6 @@ class MainWindow(QDialog):
 
             while not se.SE_GetQuitFlag():
                 if time.time() - last_call_time >= 0.5:            
-                    for j in range(se.SE_GetNumberOfObjects()):
                         se.SE_GetObjectState(se.SE_GetId(j), ctypes.byref(obj_state))
                         self.time_target.display(obj_state.timestamp)
                         
@@ -190,6 +189,8 @@ class MainWindow(QDialog):
                             obj_state.speed * 3.6, 
                             obj_state.wheelAngle, 
                             obj_state.wheelRot))
+                
+                QApplication.processEvents()
 
                 se.SE_Step()     
         # Call the data_function after the simulation is finished/quit           
