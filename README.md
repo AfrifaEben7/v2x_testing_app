@@ -9,17 +9,19 @@ Make sure you have the following dependencies installed:
 1. PyQt5
 1. pandas
 1. matplotlib
-1. Esmini (Please refer to the [Esmini documentation](https://esmini.github.io) for installation instructions specific to your system.(Building recommended))
+1. Esmini (Please refer to the [Esmini documentation](https://esmini.github.io) for installation instructions specific to your system. (Building recommended))
 
 ## Note
   - Cloning this project will clone Esimi as well (use this command: git clone --recurse-submodules https://github.com/AfrifaEben7/v2x_testing_app.git).
-  - Make sure to build for for your system.
+  - I recommend building Esmini for your system.
   
 ## Setup
 
 1. Clone the repository and navigate to the project's root directory.
+1. Build Esmini.
 1. Place the contents of the `scenario_examples` folder into the `esmini/resources/xosc` directory (`cp -r scenario_examples/* esmini/resources/xosc`). This step is necessary for demo purposes.
-1. Ensure that both the `code` and `esmini` folders are located in the same parent folder (ie, esmini should be in the root folder).
+1. Ensure that both the `code` and `esmini` folders are in the same parent folder (ie, esmini should be in the root folder).
+
 
 ## Running the Application
 
