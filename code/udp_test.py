@@ -3,6 +3,8 @@ import os
 import argparse
 from tkinter import *
 import tkinter.ttk as ttk
+sys.path.append("../esmini/scripts/udp_driver")
+
 from udp_osi_common import *
 
 DEFAULT_PORT = 53995
