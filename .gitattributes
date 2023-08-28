@@ -1,2 +1,2 @@
-*.py linguist-detectable=true
+*.py linguist-detectable=false
 *.cpp linguist-detectable=false
